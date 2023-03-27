@@ -38,11 +38,12 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   # Firebase
-  firebase_auth: ^3.6.2
-  firebase_core: ^1.20.0
+  cloud_firestore: ^3.1.6
+  firebase_auth: ^3.0.2
+  firebase_core: any
 
   # Google SignIn
-  google_sign_in: ^5.4.0
+  google_sign_in: ^5.0.1
 
   # Shared Preferences - ("https://pub.dev/packages/shared_preferences")
   shared_preferences: ^2.0.20
@@ -50,10 +51,15 @@ dependencies:
   # UI
   ## Animation Dependency
   animate_do: ^3.0.2
+  ## Auth Buttons
+  auth_buttons: ^3.0.0
   ## Google Fonts
-  google_fonts: ^4.0.3
+  google_fonts: ^3.0.1
   ## Responsive UI
   sizing: ^1.1.1
+
+dependency_overrides:
+  firebase_core_platform_interface: 4.5.1
 
 dev_dependencies:
   flutter_test:
