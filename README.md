@@ -1,4 +1,4 @@
-# flutterguide
+# Flutter Guide
 
 Flutter Guide helps you learn about flutter if you are a beginner in this space.
 
