@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+// IMPORTING ADAPTIVE CHAMELEON THEME
+import 'package:adaptive_chameleon_theme/adaptive_chameleon_theme.dart';
+
 // IMPORTING ANIMATE DO PACKAGE
 import 'package:animate_do/animate_do.dart';
 
