@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-// IMPORTING ADAPTIVE CHAMELEON THEME
+// Importing Adaptive Chameleon Theme
 import 'package:adaptive_chameleon_theme/adaptive_chameleon_theme.dart';
 
 class AppThemes {
   // Red Theme Data
   static ThemeData redTheme() {
     return ThemeData(
-      primarySwatch: Colors.red,
+        primarySwatch: Colors.red,
+        scaffoldBackgroundColor: Colors.white
     );
   }
 
@@ -21,7 +22,9 @@ class AppThemes {
   // Blue Theme Data
   static ThemeData blueTheme() {
     return ThemeData(
-      primarySwatch: Colors.blue,
+        iconTheme: const IconThemeData(color: Colors.blue),
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white
     );
   }
 
@@ -35,7 +38,8 @@ class AppThemes {
   // Purple Theme Data
   static ThemeData purpleTheme() {
     return ThemeData(
-      primarySwatch: Colors.purple,
+        primarySwatch: Colors.purple,
+        scaffoldBackgroundColor: Colors.white
     );
   }
 
@@ -49,7 +53,8 @@ class AppThemes {
   // Amber Theme Data
   static ThemeData amberTheme() {
     return ThemeData(
-      primarySwatch: Colors.amber,
+        primarySwatch: Colors.amber,
+        scaffoldBackgroundColor: Colors.white
     );
   }
 
@@ -64,6 +69,7 @@ class AppThemes {
   static ThemeData greenTheme() {
     return ThemeData(
       primarySwatch: Colors.green,
+      scaffoldBackgroundColor: Colors.white,
     );
   }
 
@@ -74,6 +80,9 @@ class AppThemes {
     );
   }
 
+  /// The app's themes.
+  /// This code is used to connect readable names
+  /// to integer theme IDs.
   static const int red = 0;
   static const int blue = 1;
   static const int purple = 2;
@@ -106,6 +115,7 @@ class AppThemes {
       green: greenTheme(),
     },
     fallbackTheme: ThemeData.light(), // optional fallback theme, default value
+    // is ThemeData.light()
   );
 
   static ThemeCollection darkThemeCollection = ThemeCollection(
@@ -117,5 +127,6 @@ class AppThemes {
       green: greenDarkTheme(),
     },
     fallbackTheme: ThemeData.dark(), // optional fallback theme, default value
+    // is ThemeData.dark()
   );
 }

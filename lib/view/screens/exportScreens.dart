@@ -8,3 +8,9 @@ export 'package:flutterguide/view/screens/HomeScreen/homeScreen.dart';
 
 // EXPORTING DASHBOARD SCREEN
 export 'package:flutterguide/view/screens/DashboardScreen/dashboardScreen.dart';
+
+// EXPORTING SETTINGS SCREEN
+export 'package:flutterguide/view/screens/SettingsScreen/settingsScreen.dart';
+
+// EXPORTING ABOUT SCREEN
+export 'package:flutterguide/view/screens/AboutScreen/aboutScreen.dart';

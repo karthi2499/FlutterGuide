@@ -2,7 +2,7 @@
     package="flutterguide.from.kurubaran">
    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="flutterguide"
+        android:label="Flutter Guide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

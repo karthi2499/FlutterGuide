@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // IMPORTING ADAPTIVE CHAMELEON THEME
 import 'package:adaptive_chameleon_theme/adaptive_chameleon_theme.dart';
 
 // IMPORTING FIREBASE DEPENDENCIES
 import 'package:firebase_core/firebase_core.dart';
-
-// IMPORTING SIZING
-import 'package:sizing/sizing.dart';
 
 // IMPORTING SERVICES
 import 'package:flutterguide/service/authService.dart';
@@ -32,18 +30,13 @@ class FlutterGuide extends StatelessWidget {
         darkThemeCollection: AppThemes.darkThemeCollection,
         defaultThemeId: AppThemes.blue,
         builder: (context, theme, darkTheme, themeMode) {
-          return SizingBuilder(
-            builder: () => MaterialApp(
-              debugShowCheckedModeBanner: false,
-              home: AuthService().handleAuthState(),
-              theme: ThemeData(
-                appBarTheme: const AppBarTheme(
-                  centerTitle: true,
-                ),
-              ),
-              title: 'Flutter Guide',
-            ),
-            systemFontScale: true,
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: AuthService().handleAuthState(),
+            darkTheme: darkTheme,
+            theme: theme,
+            themeMode: themeMode,
+            title: 'Flutter Guide',
           );
         }
     );
