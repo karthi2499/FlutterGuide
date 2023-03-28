@@ -2,3 +2,6 @@
 .dart_tool
 .idea
 build
+
+# REMOVING "google-services.json" FOR SECURITY PURPOSE
+android/app/google-services.json
