@@ -68,6 +68,8 @@ dependencies:
   cool_dropdown: ^1.4.2
   ## Google Fonts
   google_fonts: ^3.0.1
+  ## Icons
+  iconsax: ^0.0.8
 
 dependency_overrides:
   firebase_core_platform_interface: 4.5.1

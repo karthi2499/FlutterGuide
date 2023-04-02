@@ -430,18 +430,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
       );
     } else {
       return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          centerTitle: false,
-          elevation: 0,
-          title: Padding(
-            padding: EdgeInsets.only(left: 4),
-            child: Text(
-              "Home",
-              style: GoogleFonts.fredoka(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500),
-            ),
-          )
-        ),
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   centerTitle: false,
+        //   elevation: 0,
+        //   title: Padding(
+        //     padding: EdgeInsets.only(left: 4),
+        //     child: Text(
+        //       "Home",
+        //       style: GoogleFonts.fredoka(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500),
+        //     ),
+        //   )
+        // ),
         body: SafeArea(
             child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
