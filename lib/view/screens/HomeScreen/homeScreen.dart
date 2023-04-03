@@ -9,6 +9,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 // IMPORTING GOOGLE FONTS
 import 'package:google_fonts/google_fonts.dart';
 
+// IMPORTING ICONSAX ICONS
+import 'package:iconsax/iconsax.dart';
+
 // IMPORTING SERVICES
 import 'package:flutterguide/service/authService.dart';
 
@@ -23,6 +26,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final String _title = "Flutter Guide";
   String? user = FirebaseAuth.instance.currentUser!.email ??
       FirebaseAuth.instance.currentUser!.displayName;
 
@@ -72,13 +76,19 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     return Scaffold(
       key: _scaffoldKey,
-      floatingActionButton: FloatingActionButton.extended(
-        icon: Icon(Icons.menu),
-        onPressed: () {
-          _scaffoldKey.currentState!.openDrawer();
-        },
-        tooltip: 'Open Drawer',
-        label: Text("Menu"),
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Iconsax.category_25),
+          onPressed: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+        ),
+        title: Text(
+          _title,
+          style: GoogleFonts.fredoka(fontSize: 24, fontWeight: FontWeight.w500),
+        ),
       ),
       drawer: Drawer(
         child: Column(

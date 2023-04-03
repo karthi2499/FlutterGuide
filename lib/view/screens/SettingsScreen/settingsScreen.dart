@@ -7,6 +7,9 @@ import 'package:adaptive_chameleon_theme/adaptive_chameleon_theme.dart';
 // IMPORTING GOOGLE FONTS
 import 'package:google_fonts/google_fonts.dart';
 
+// IMPORTING ICONSAX ICONS
+import 'package:iconsax/iconsax.dart';
+
 // IMPORTING URL LAUNCHER
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,17 +42,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     if(themeModeDropdownValue.index == 2) {
       return Scaffold(
-          appBar: AppBar(
-              centerTitle: false,
-              elevation: 0,
-              title: Padding(
-                padding: EdgeInsets.only(left: 0),
-                child: Text(
-                  "Settings",
-                  style: GoogleFonts.fredoka(fontSize: 24, fontWeight: FontWeight.w500),
-                ),
-              )
-          ),
           body: SafeArea(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -110,7 +102,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         leading: CircleAvatar(
                           radius: 24,
                           child: Icon(
-                              Icons.brush_rounded,
+                              Icons.brush,
                               color: Colors.white,
                               size: 20
                           ),
@@ -160,8 +152,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
                         title: Text(
-                          "Dark Theme",
-                          style: GoogleFonts.fredoka(fontSize: 18, fontWeight: FontWeight.w400),),
+                          "Current Mode",
+                          style: GoogleFonts.fredoka(fontSize: 18, fontWeight: FontWeight.w400),
+                        ),
+                        subtitle: Text(
+                          "Dark",
+                          style: GoogleFonts.fredoka(fontSize: 14, fontWeight: FontWeight.w400),
+                        ),
                         trailing: ThemeModeSelectorWidget(),
                       ),
                       SizedBox(height: 32,),
@@ -247,18 +244,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       );
     } else {
       return Scaffold(
-          appBar: AppBar(
-              backgroundColor: Colors.white,
-              centerTitle: false,
-              elevation: 0,
-              title: Padding(
-                padding: EdgeInsets.only(left: 0),
-                child: Text(
-                  "Settings",
-                  style: GoogleFonts.fredoka(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500),
-                ),
-              )
-          ),
           body: SafeArea(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -369,8 +354,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
                         title: Text(
-                          "Light Theme",
-                          style: GoogleFonts.fredoka(fontSize: 18, fontWeight: FontWeight.w400),),
+                          "Current Mode",
+                          style: GoogleFonts.fredoka(fontSize: 18, fontWeight: FontWeight.w400),
+                        ),
+                        subtitle: Text(
+                          "Light",
+                          style: GoogleFonts.fredoka(fontSize: 14, fontWeight: FontWeight.w400),
+                        ),
                         trailing: ThemeModeSelectorWidget(),
                       ),
                       SizedBox(height: 32,),
@@ -448,6 +438,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           title: Text("Terms of Service", style: GoogleFonts.fredoka(fontSize: 18, fontWeight: FontWeight.w400),),
                         ),
                       ),
+                      SizedBox(height: 32,),
                     ],
                   )
               ),
