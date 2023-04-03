@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 // Importing Adaptive Chameleon Theme
 import 'package:adaptive_chameleon_theme/adaptive_chameleon_theme.dart';
 
+// IMPORTING GOOGLE FONTS
+import 'package:google_fonts/google_fonts.dart';
+
 class AppThemes {
   // Red Theme Data
   static ThemeData redTheme() {
     return ThemeData(
+        appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white, centerTitle: true, elevation: 0, iconTheme: IconThemeData(color: Colors.black), titleTextStyle: GoogleFonts.fredoka(color: Colors.black)
+        ),
         primarySwatch: Colors.red,
         scaffoldBackgroundColor: Colors.white
     );
@@ -22,6 +28,9 @@ class AppThemes {
   // Blue Theme Data
   static ThemeData blueTheme() {
     return ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white, centerTitle: true, elevation: 0, iconTheme: IconThemeData(color: Colors.black), titleTextStyle: GoogleFonts.fredoka(color: Colors.black)
+        ),
         iconTheme: const IconThemeData(color: Colors.blue),
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white
@@ -38,6 +47,9 @@ class AppThemes {
   // Purple Theme Data
   static ThemeData purpleTheme() {
     return ThemeData(
+        appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white, centerTitle: true, elevation: 0, iconTheme: IconThemeData(color: Colors.black), titleTextStyle: GoogleFonts.fredoka(color: Colors.black)
+        ),
         primarySwatch: Colors.purple,
         scaffoldBackgroundColor: Colors.white
     );
@@ -53,6 +65,9 @@ class AppThemes {
   // Amber Theme Data
   static ThemeData amberTheme() {
     return ThemeData(
+        appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white, centerTitle: true, elevation: 0, iconTheme: IconThemeData(color: Colors.black), titleTextStyle: GoogleFonts.fredoka(color: Colors.black)
+        ),
         primarySwatch: Colors.amber,
         scaffoldBackgroundColor: Colors.white
     );
@@ -68,6 +83,9 @@ class AppThemes {
   // Green Theme Data
   static ThemeData greenTheme() {
     return ThemeData(
+      appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white, centerTitle: true, elevation: 0, iconTheme: IconThemeData(color: Colors.black), titleTextStyle: GoogleFonts.fredoka(color: Colors.black)
+      ),
       primarySwatch: Colors.green,
       scaffoldBackgroundColor: Colors.white,
     );
