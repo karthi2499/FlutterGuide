@@ -5,6 +5,7 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 
 // IMPORTING FIREBASE DEPENDENCIES
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 // IMPORTING GOOGLE FONTS
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +27,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+
   final String _title = "Flutter Guide";
+
   String? user = FirebaseAuth.instance.currentUser!.email ??
       FirebaseAuth.instance.currentUser!.displayName;
 
@@ -35,6 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _firebaseMessaging.requestPermission();
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      // Handle the incoming message here
+    });
   }
 
   final drawerItems = [
